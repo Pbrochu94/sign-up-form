@@ -1,6 +1,7 @@
 :root{
     --basic-font-size: 22px;
     --basic-font-weight:bold;
+    --basic-text-color:rgb(25,25,25)
 }
 
 *{
@@ -65,11 +66,9 @@ img[src="img/odin-lined.png"]{
 .right-upper{
     width:100%;
     height:37%;
-    background-color:blue;
 }
 
 .right-middle{
-    background-color:red;
     flex:1;
 }
 
@@ -79,15 +78,51 @@ img[src="img/odin-lined.png"]{
     width:100%;
 }
 
-p:first-child{
-    padding-top:6.5em;
-}
-
-div>p:not(img+p){
+div.right-upper>p:not(img+p){
     padding-left: 1.5em;
     font-size: var(--basic-font-size);
     font-weight:var(--basic-font-weight);
     max-width: 60ch;
     padding-bottom: 1em;
+    color:var(--basic-text-color);
 }
 
+p:first-child:not(.form-title){
+    padding-top:6.5em;
+}
+
+
+.form-container{
+    display: flex;
+}
+
+li{
+    list-style:none;
+    margin: 2em;
+}
+
+input, label{
+    display: block;
+}
+
+input{
+    height:2em;
+    border: 1px solid rgba(189, 185, 185, 0.6);
+    border-radius: 3px;
+    width:16em;
+}
+
+.form-sections{
+    margin-left: 1em;
+}
+
+.form-sections:last-child{
+    margin-left: 2em;
+}
+
+.form-title{
+    font-size: var(--basic-font-size);
+    font-weight:var(--basic-font-weight);
+    color: rgb(50,50,50);
+    margin-left: 3rem;
+}
