@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-overflow:hidden;
 }
 @font-face {
     font-family: viking;
@@ -26,7 +27,7 @@ body{
     background-color:rgb(255, 255, 255);
     height:100%;
     width:min(1300px,100vw);
-    height: min(1300px, 70vw);
+    height: min(100%, 70vw);
     display:flex;
 }
 
@@ -38,15 +39,15 @@ body{
 }
 
 img[src="img/odin-lined.png"]{
-    height: 7em;
+    height: min(7em,10vw);
 }
 
 .odin-text{
     display:flex;
-    height:15%;
+    height:min(9em, 10vw);
     background-color: rgba(0, 0, 0, 0.5);
     position: relative;
-    top:22%;
+    top:30%;
     align-items: center;
     justify-content: center;
 }
@@ -67,7 +68,7 @@ img[src="img/odin-lined.png"]{
 .right-upper{
     width:100%;
     height:min(37%, 30vw);
-    background-color: rgb(248,248,248)
+    background-color: rgb(248,248,248);
 }
 
 .right-middle{
@@ -76,13 +77,13 @@ img[src="img/odin-lined.png"]{
 }
 
 .right-lower{
-    background-color: rgb(226, 10, 10);
+    background-color: rgb(248,248,248);
     height:min(34%, 30vw);
     width:100%;
 }
 
 div.right-upper>p:not(img+p){
-    padding-left: 2em;
+    margin-left: calc(1rem + 1.5vw);
     font-size: min(var(--basic-font-size), 2vw);
     font-weight:var(--basic-font-weight);
     max-width: 60ch;
@@ -91,7 +92,8 @@ div.right-upper>p:not(img+p){
 }
 
 p:first-child:not(.form-title):not(.login-text){
-    padding-top:min(16vw);
+    margin-top:min(6em, 14vw);
+    position:relative;
 }
 
 
@@ -100,12 +102,13 @@ p:first-child:not(.form-title):not(.login-text){
 }
 
 ul{
-    flex-shrink: 1;
+    margin-left: calc(1rem + 1.5vw);
 }
 
 li{
     list-style:none;
-    margin: 2em;
+    margin: 1vw;
+    margin-left:0;
 }
 
 input, label{
@@ -119,20 +122,12 @@ input:not([type="submit"]){
     width:18em;
 }
 
-.form-sections{
-    margin-left: 1em;
-}
-
-.form-sections:last-child{
-    margin-left: 2em;
-}
-
 .form-title{
     font-size: min(var(--basic-font-size), 2vw);
     font-weight:var(--basic-font-weight);
     color: rgb(50,50,50);
-    margin-left: 3rem;
-    margin-top: 1em;
+    margin-left: calc(1rem + 1.5vw);
+    margin-top:calc(0.5em + 0.5vw);
 }
 
 label{
