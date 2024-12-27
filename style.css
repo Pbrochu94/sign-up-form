@@ -169,3 +169,15 @@ input[type="text"], input[type="email"], input[type="phone"], input[type="passwo
     width:min(16em, 20vw);
     height:min(2em,3vw)
 }
+
+input:focus:not([type="submit"]){
+    outline: 1px solid blue;
+    box-shadow: 2px 2px 3px rgb(196, 194, 194);
+}
+input:invalid{
+    outline: 1px solid rgb(255, 0, 0);
+}
+
+input:valid{
+    outline: 1px solid rgb(29, 167, 1);
+}
